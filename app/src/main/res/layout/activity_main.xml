@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/top_background">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Xin chào"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoàng Phúc"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/tv_welcome"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="28sp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/tv_welcome2"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <LinearLayout
+        android:id="@+id/function_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_background"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/function_list"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:weightSum="3"
+        android:minHeight="100dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/text_blue"
+            app:strokeWidth="0dp"
+            android:padding="10dp"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F8DEB7"
+            android:drawableTop="@drawable/video_call"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#C6840A"
+            android:text="Video call"
+            android:textStyle="bold|italic"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/text_blue"
+            app:strokeWidth="0dp"
+            android:padding="10dp"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F8DEB7"
+            android:drawableTop="@drawable/notification"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#C6840A"
+            android:text="Notify"
+            android:textStyle="bold|italic"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/text_blue"
+            app:strokeWidth="0dp"
+            android:padding="10dp"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F8DEB7"
+            android:drawableTop="@drawable/voice_call"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#C6840A"
+            android:text="Voice call"
+            android:textStyle="bold|italic"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/function_list"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/function_list"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableRight="@drawable/search_icon"
+        android:drawablePadding="2dip"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/search_box"
+        android:background="@drawable/banner_background"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_banner_text"
+            android:layout_width="168dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:text="To get unlimited upgrade your account"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toEndOf="@+id/tv_banner_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/function_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_below="@+id/banner">
+        <TableRow android:layout_marginTop="24dp">
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_1"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Inbox"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_2"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Map"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_3"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Chat"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_4"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Report"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+        </TableRow>
+        <TableRow android:layout_marginTop="24dp">
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_5"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Calendar"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_6"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Tips"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_7"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="Settings"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_8"
+                        android:layout_gravity="center"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:text="More"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_blue"/>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
